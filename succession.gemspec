@@ -7,17 +7,17 @@ require "succession/version"
 Gem::Specification.new do |s|
   s.name        = "succession"
   s.version     = Succession::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Succession."
+  s.authors     = ["Felix Langenegger"]
+  s.email       = ["felix.langenegger@gmail.com"]
+  s.homepage    = "http://fadendaten.ch"
+  s.summary     = "Rails Plugin to provide a user managed succession."
   s.description = "TODO: Description of Succession."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.14"
-  # s.add_dependency "jquery-rails"
+  s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end
