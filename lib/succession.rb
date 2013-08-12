@@ -2,13 +2,12 @@ require "succession/engine"
 
 module Succession
 
-  def included(base)
-    base.has_one :succession_entity, class_name: "Succession::Entity", dependend: :destroy
+  def self.included(base)
+    base.has_one :succession_entity,
+                  class_name: "Succession::Entity",
+                  as: :parent,
+                  dependent: :destroy
     base.after_create :create_succession_entity
-  end
-
-  def welcome
-    puts "hello"
   end
 
   private
@@ -24,11 +23,12 @@ module Succession
   end
 
   def last_sueccession_entity
-    all_succession_entities.order(:rank).first
+    all_succession_entities.order(:rank).last
   end
 
   def highest_succession_rank
-    last_sueccession_entity + 1
+    return last_sueccession_entity.rank + 1 unless last_sueccession_entity.nil?
+    return 0
   end
 
 end
