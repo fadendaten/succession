@@ -1,0 +1,177 @@
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:04:45 +0200
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:06:19 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:06:26 +0200
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant PostsController::Post):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:07:32 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 16ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateSuccessionEntities (20130809120528)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "succession_entities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "parent_type" varchar(255), "rank" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130809120528')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:07:48 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:07:54 +0200
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 26ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:11:22 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:3:in `index'
+
+
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/felix/.rvm/gems/ruby-1.9.3-p362@succession/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.7ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20130809123218)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130809123218')[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "succession_entities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "parent_id" integer, "parent_type" varchar(255), "rank" integer DEFAULT 0, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130809123218')[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:11:46 +0200
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Compiled application.css  (0ms)  (pid 63073)
+Compiled jquery.js  (1ms)  (pid 63073)
+Compiled jquery_ujs.js  (0ms)  (pid 63073)
+Compiled application.js  (113ms)  (pid 63073)
+Completed 200 OK in 272ms (Views: 246.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 14:11:46 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 14:11:46 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-13 14:11:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 14:11:46 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-08-13 14:12:38 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (93.5ms)
+Completed 200 OK in 127ms (Views: 95.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-13 14:12:38 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-13 14:12:38 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-13 14:12:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-13 14:12:38 +0200
+Served asset /application.js - 304 Not Modified (0ms)
