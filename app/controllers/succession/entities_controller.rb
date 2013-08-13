@@ -1,6 +1,5 @@
 module Succession
-  class EntitiesController < ApplicationController
-
+  class EntitiesController < ActionController::Base
     def up
       entity = Succession::Entity.find(params[:id])
       entity.up
