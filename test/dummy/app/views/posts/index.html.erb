@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<br/>
+<%- @posts.each do |post|%>
+  <%= post.id%>
+  <br/>
+  <%= post.rank%>
+  <br/>
+  <%= up_link_to "+", post%><%= down_link_to"-", post%>
+<% end %>

@@ -1,4 +1,6 @@
 require "succession/engine"
+require "succession/url_helper"
+
 
 module Succession
 
@@ -8,6 +10,18 @@ module Succession
                   as: :parent,
                   dependent: :destroy
     base.after_create :create_succession_entity
+  end
+
+  def rank
+    Succession::Entity.where(parent_id: self.id,
+                             parent_type: self.class.to_s).first.rank
+  end
+
+  def rank= rank
+    enity = Succession::Entity.where(parent_id: self.id,
+                             parent_type: self.class.to_s).first
+    enity.rank = rank
+    enity.save
   end
 
   private
