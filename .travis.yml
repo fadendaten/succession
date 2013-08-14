@@ -1,8 +1,27 @@
-language: ruby
+before_install:
+  - echo "yes" 
+script:
+  - bundle
+  - rake appraisal:install
+  - rake appraisal
 rvm:
+  - 1.8.7
+  - 1.9.2
   - 1.9.3
-  - jruby-18mode # JRuby in 1.8 mode
-  - jruby-19mode # JRuby in 1.9 mode
+  - 2.0.0
   - rbx-18mode
   - rbx-19mode
-  - 1.8.7
+  - jruby-18mode
+  - jruby-19mode
+  - jruby-head
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+    - rvm: jruby-head
+    - rvm: jruby-19mode
+    - rvm: rbx-19mode
+notifications:
+  email:
+    on_success: always
+    on_failure: always
