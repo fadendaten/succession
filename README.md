@@ -18,7 +18,7 @@ After the installation type into your terminal:
 
     rake succession:install:migrations
 
-to execute the gem's migrations.
+to move the gem's migrations into your application.
 
 ## Usage
 
