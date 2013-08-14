@@ -1,7 +1,8 @@
 # Succession
 
-Manage the Rails object succession easily.
+[![Gem Version](https://badge.fury.io/rb/succession.png)](http://badge.fury.io/rb/succession)
 
+Manage the Rails object succession easily.
 
 You have to privide a user manage succession for a Rails object, you can simply
 add this gem.
