@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/succession.png)](http://badge.fury.io/rb/succession)
 [![Build Status](https://travis-ci.org/fadendaten/succession.png?branch=master)](https://travis-ci.org/fadendaten/succession)
+[![Dependency Status](https://gemnasium.com/fadendaten/succession.png)](https://gemnasium.com/fadendaten/succession)
 
 Manage the Rails object succession easily.
 
