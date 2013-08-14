@@ -3,7 +3,6 @@ require "succession/url_helper"
 
 
 module Succession
-
   def self.included(base)
     base.has_one :succession_entity,
                   class_name: "Succession::Entity",
