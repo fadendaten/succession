@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
-  match '/succession_entity/:id/up/'   => "Succession::Entities#up"
-  match '/succession_entity/:id/down/' => "Succession::Entities#down"
+Succession::Engine.routes.draw do
+  match 'entities/:id/up/'   => "entities#up"
+  match 'entities/:id/down/' => "entities#down"
 end

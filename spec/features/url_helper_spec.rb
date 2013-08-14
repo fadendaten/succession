@@ -9,19 +9,31 @@ feature '1 up' do
     @post =  Post.create!
   end
 
-  scenario 'Vote the Post one up' do
-    visit "/posts/"
+  scenario 'Vote the Post one up with up_link_to' do
+    visit "/posts"
     expect(page).to have_text("0")
-    @post.succession_entity.up
-    visit "/posts/"
+    click_link "up"
     expect(page).to have_text("1")
   end
 
-  scenario 'Vote the Post one down' do
-    visit "/posts/"
+  scenario 'Vote the Post one down with down_link_to' do
+    visit "/posts"
     expect(page).to have_text("0")
-    @post.succession_entity.down
-    visit "/posts/"
+    click_link "down"
+    expect(page).to have_text("-1")
+  end
+
+  scenario 'Vote the Post one up with up_button_to' do
+    visit "/posts"
+    expect(page).to have_text("0")
+    click_button "up"
+    expect(page).to have_text("1")
+  end
+
+  scenario 'Vote the Post one down with down_button_to' do
+    visit "/posts"
+    expect(page).to have_text("0")
+    click_button "down"
     expect(page).to have_text("-1")
   end
 end

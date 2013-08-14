@@ -5958,3 +5958,985 @@ Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
   [1m[35mSQL (2.5ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 07:44:42 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 07:44:42 UTC +00:00]]
   [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.1ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.4ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:23:15.886438' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:23:15.918820' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:23:15.930897' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:23:15 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:23:16 +0200
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:23:16 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms)
+Started GET "/posts/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:23:16 +0200
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.2ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:23:16.085752' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:23:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:23:16.103445' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (37.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:24:15.430597' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:24:15.443575' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:24:15.496751' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:24:15.514007' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:24:15 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+Started GET "/posts/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:24:15 +0200
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:24:15 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+Started GET "/posts/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:24:15 +0200
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.2ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:24:15.628416' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:24:15 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (20.6ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:25:38.224350' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:25:38 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+Started GET "/posts/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:25:38 +0200
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts/" for 127.0.0.1 at 2013-08-14 12:25:38 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/posts/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:25:38 +0200
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:25:38.323661' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:25:38.335748' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:25:38.351448' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:25:38 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:25:38.366976' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:26:08.505090' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:26:08.519746' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:26:08.574671' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:26:08.591900' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:26:08.614131' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:08 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+Started GET "/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:26:08 +0200
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:08 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms)
+Started GET "/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:26:08 +0200
+  [1m[35m (0.6ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+Started GET "/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:26:44.361438' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:26:44.394101' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:26:44 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (22.9ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.2ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.2ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:26:44.487250' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:26:44.503746' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:26:44.519931' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:26:44.538120' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:26:44 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:26:44.551690' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:28:32.698189' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:28:32.712138' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", nil], ["parent_type", nil], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+Started POST "/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:28:32.797998' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/succession/entities/1/down" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:28:32.848073' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started POST "/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:28:32.879264' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/succession/entities/1/up" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:28:32.910129' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2013-08-14 12:28:32 +0200
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.2ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = 123, "updated_at" = '2013-08-14 10:28:32.988327' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:32 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00]]
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+Processing by Succession::EntitiesController#down as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSuccession::Entity Load (0.0ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "succession_entities" SET "rank" = -1, "updated_at" = '2013-08-14 10:28:33.012947' WHERE "succession_entities"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)  [["content", nil], ["created_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00], ["updated_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00]]
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" ORDER BY rank DESC LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "succession_entities" ("created_at", "parent_id", "parent_type", "rank", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00], ["parent_id", 1], ["parent_type", "Post"], ["rank", 0], ["updated_at", Wed, 14 Aug 2013 10:28:33 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSuccession::Entity Load (0.1ms)[0m  SELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1
+Processing by Succession::EntitiesController#up as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSuccession::Entity Load (0.0ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mUPDATE "succession_entities" SET "rank" = 1, "updated_at" = '2013-08-14 10:28:33.027574' WHERE "succession_entities"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to source_page
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mSuccession::Entity Load (0.1ms)[0m  [1mSELECT "succession_entities".* FROM "succession_entities" WHERE "succession_entities"."parent_id" = 1 AND "succession_entities"."parent_type" = 'Post' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction

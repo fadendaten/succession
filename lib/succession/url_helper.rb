@@ -37,11 +37,11 @@ module ActionView::Helpers::UrlHelper
   end
 
   def succession_entity_up_path(entity)
-    "succession_entity/#{entity.id}/up"
+    "succession/entities/#{entity.id}/up"
   end
 
   def succession_entity_down_path(entity)
-    "succession_entity/#{entity.id}/down"
+    "succession/entities/#{entity.id}/down"
   end
 
 end

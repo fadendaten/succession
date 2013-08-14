@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    succession (0.0.3)
+    succession (0.1.0)
       jquery-rails
       rails (~> 3.2.14)
 

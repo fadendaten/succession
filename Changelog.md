@@ -1,5 +1,9 @@
 # Changelog
 
+# Version 0.2.0
+- Configured gem as mountable engine
+- Fixed some routing issues
+
 # Version 0.1.0
 
 - Added Succession::Entity model
