@@ -1,6 +1,7 @@
 # Succession
 
 [![Gem Version](https://badge.fury.io/rb/succession.png)](http://badge.fury.io/rb/succession)
+[![Build Status](https://travis-ci.org/fadendaten/succession.png?branch=master)](https://travis-ci.org/fadendaten/succession)
 
 Manage the Rails object succession easily.
 
