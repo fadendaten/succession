@@ -49,7 +49,7 @@ For down rating:
 
     <%= down_link_to "rate up", @post%>
 
-#### 1. up_link_to, down_link_to
+#### 2. up_button_to, down_button_to
 
 If you are more the button type, use this:
 
