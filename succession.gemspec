@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.email       = ["felix.langenegger@gmail.com"]
   s.homepage    = "http://fadendaten.ch"
   s.summary     = "Rails Plugin to provide a user managed succession."
-  s.description = "TODO: Description of Succession."
+  s.description = "The Succession gem provides a easy to use ActiveRecord
+  extension to manage a specific succession."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -20,4 +21,9 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'simplecov'
+  s.add_development_dependency 'capybara', '~> 2.1.0'
+
 end
+

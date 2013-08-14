@@ -1,10 +1,12 @@
 <h1>Posts</h1>
 <br/>
 <%- @posts.each do |post|%>
-  <%= post.id%>
   <br/>
   <%= post.rank%>
   <br/>
-  <%= up_link_to "+", post%><%= down_link_to"-", post%>
+  <%= up_link_to "up", post%>
+  <%= down_link_to"down", post%>
+  <%= up_button_to"up", post%>
+  <%= down_button_to"down", post%>
 <% end %>
 
