@@ -10,12 +10,12 @@ add this gem.
 
 Add to your Gemfile:
 
-   gem succession
+    gem succession
 
 and run the bundle install command.
 After the installation type into your terminal:
 
-   rake succession:install:migrations
+    rake succession:install:migrations
 
 to execute the gem's migrations.
 
@@ -25,12 +25,12 @@ to execute the gem's migrations.
 
 To add the succession behavior, put this code into your model.
 
-   class Post < ActiveRecord::Base
-     include Succession
+    class Post < ActiveRecord::Base
+      include Succession
 
-     # Your code.
+      # Your code.
 
-   end
+    end
 
 ### View
 
@@ -42,11 +42,11 @@ If you want to use links add this into your view files:
 
 For up rating:
 
-   <%= up_link_to "rate up", @post%>
+    <%= up_link_to "rate up", @post%>
 
 For down rating:
 
-   <%= down_link_to "rate up", @post%>
+    <%= down_link_to "rate up", @post%>
 
 #### 1. up_link_to, down_link_to
 
@@ -54,11 +54,11 @@ If you are more the button type, use this:
 
 For up rating:
 
-   <%= up_button_to "rate up", @post%>
+    <%= up_button_to "rate up", @post%>
 
 For down rating:
 
-   <%= down_button_to "rate up", @post%>
+    <%= down_button_to "rate up", @post%>
 
 ## Copyright
 
