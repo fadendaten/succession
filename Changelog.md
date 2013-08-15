@@ -1,5 +1,8 @@
 # Changelog
 
+# Version 0.2.3
+- Update Rails Version 4.0.0
+
 # Version 0.2.0
 - Configured gem as mountable engine
 - Fixed some routing issues
