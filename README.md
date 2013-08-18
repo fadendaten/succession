@@ -5,7 +5,7 @@
 
 Manage the Rails object succession easily.
 
-You have to privide a user manage succession for a Rails object, you can simply
+If you want  to provide a user manage succession for a Rails object, you can simply
 add this gem.
 
 ## Installation
